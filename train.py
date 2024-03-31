@@ -13,8 +13,8 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261))
 ])
-train_data = datasets.CIFAR10("/data", train=True, download=True, transform=transform)
-test_data = datasets.CIFAR10("/data", train=False, download=True, transform=transform)
+train_data = datasets.CIFAR10("./data", train=True, download=True, transform=transform)
+test_data = datasets.CIFAR10("./data", train=False, download=True, transform=transform)
 
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=1000, shuffle=False)

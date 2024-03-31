@@ -117,7 +117,7 @@ class CLIP(nn.Module):
             nn.init.normal_(block.attn.in_proj_weight, std=attn_std)
             nn.init.normal_(block.attn.out_proj.weight, std=proj_std)
             nn.init.normal_(block.mlp.c_fc.weight, std=fc_std)
-            nn.init_normal_(block.mlp.c_proj.weight, std=proj_std)
+            nn.init.normal_(block.mlp.c_proj.weight, std=proj_std)
 
         if self.text_proj is not None:
             nn.init.normal_(self.text_proj, std=self.transformer.width**-.5)
