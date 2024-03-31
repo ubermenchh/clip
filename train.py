@@ -54,7 +54,7 @@ def train(train_loader, epochs=50, freqs=500, temp=2.65):
             optimizer.step()
 
             if counter % freqs == 0:
-                print("Training Step {counter}: Loss {loss}")
+                print(f"Training Step {counter}: Loss {loss}")
             counter += 1
 
 
